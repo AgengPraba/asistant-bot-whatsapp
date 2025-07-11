@@ -1,0 +1,26 @@
+{
+  "name": "assistant-bot-whatsapp",
+  "version": "1.0.0",
+  "description": "Bot for assist me on my whatsapp",
+  "main": "dist/app.js",
+  "repository": "https://github.com/AgengPraba/asistant-bot-whatsapp.git",
+  "author": "Ageng <agengpraba@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.0.13",
+    "@types/node-cron": "^3.0.11",
+    "nodemon": "^3.1.10",
+    "pino-pretty": "^13.0.0",
+    "prisma": "^6.11.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"  
+  },
+  "dependencies": {
+    "@prisma/client": "^6.11.1",
+    "axios": "^1.10.0",
+    "dotenv": "^17.2.0",
+    "node-cron": "^4.2.1",
+    "pino": "^9.7.0",
+    "venom-bot": "^5.3.0"
+  }
+}
