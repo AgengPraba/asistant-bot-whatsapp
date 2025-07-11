@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model TagihanListrik {
+  id        Int      @id @default(autoincrement())
+  nama      String 
+  bulan     String   
+  jumlah    Int     
+  sudahBayar Boolean  @default(false)
+  chatId    String  
+  createdAt DateTime @default(now())
+}
+
+model Pengingat {
+  id        Int      @id @default(autoincrement())
+  pesan     String   
+  targetId  String  
+  waktu     DateTime 
+  sudahDikirim Boolean @default(false)
+}
