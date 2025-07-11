@@ -13,7 +13,7 @@ datasource db {
 model TagihanListrik {
   id        Int      @id @default(autoincrement())
   nama      String 
-  bulan     String   
+  nomorHp   String   
   jumlah    Int     
   sudahBayar Boolean  @default(false)
   chatId    String  

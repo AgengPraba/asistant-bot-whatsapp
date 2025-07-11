@@ -3,6 +3,18 @@
   "version": "1.0.0",
   "description": "Bot for assist me on my whatsapp",
   "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "nodejs",
+    "typescript",
+    "venom"
+  ],
   "repository": "https://github.com/AgengPraba/asistant-bot-whatsapp.git",
   "author": "Ageng <agengpraba@gmail.com>",
   "license": "MIT",
