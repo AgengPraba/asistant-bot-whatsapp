@@ -26,14 +26,11 @@ export async function handleConverter(sock: any, msg: any) {
     const isPdf = isDocument && msgInfo.documentMessage.mimetype === 'application/pdf';
 
 
-    // Memulai sesi penggabungan
     if (command === '.mulai-gabung') {
         pdfMergeStore.set(chatId, { isActive: true, files: [] });
         await sock.sendMessage(chatId, { text: "✅ Mode penggabungan PDF dimulai.\n\nSilakan kirim file PDF Anda satu per satu. Ketik *.gabungpdf* jika sudah selesai atau *.batal-gabung* untuk membatalkan." }, { quoted: msg });
         return;
     }
-
-    // Membatalkan sesi penggabungan
     if (command === '.batal-gabung') {
         const session = pdfMergeStore.get(chatId);
         if (session) {
