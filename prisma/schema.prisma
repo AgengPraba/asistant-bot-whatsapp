@@ -21,9 +21,10 @@ model TagihanListrik {
 }
 
 model Pengingat {
-  id        Int      @id @default(autoincrement())
-  pesan     String   
-  targetId  String  
-  waktu     DateTime 
-  sudahDikirim Boolean @default(false)
+  id           Int      @id @default(autoincrement())
+  userId       String   // ID pengguna yang membuat pengingat
+  pesan        String  
+  waktu        DateTime // Waktu pasti kapan pengingat harus dikirim
+  sudahDikirim Boolean  @default(false)
+  createdAt    DateTime @default(now())
 }
