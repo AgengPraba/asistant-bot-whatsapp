@@ -10,7 +10,7 @@ const penghuniKos = [
     { nama: 'Kanjar', nomorHp: '6281214956028@s.whatsapp.net', jumlah: 50000 },
 ];
 
-export async function tambahTagihan(sock: any, chatId: string, body: string, senderId: string, msg: any) {
+export async function tambahTagihan(sock: any, chatId: string, body: string, senderId: any, msg: any) {
     if (!adminNumber.includes(senderId)) return;
 
     const parts = body.split(' ');
@@ -69,7 +69,7 @@ export async function cekTagihan(sock: any, chatId: string, msg: any) {
 }
 
 
-export async function tandaiLunas(sock: any, chatId: string, body: string, senderId: string, msg: any) {
+export async function tandaiLunas(sock: any, chatId: string, body: string, senderId: any, msg: any) {
     if (!adminNumber.includes(senderId)) return;
 
     const parts = body.split(' ');
@@ -97,7 +97,7 @@ export async function tandaiLunas(sock: any, chatId: string, body: string, sende
 }
 
 
-export async function editTagihan(sock: any, chatId: string, body: string, senderId: string, msg: any) {
+export async function editTagihan(sock: any, chatId: string, body: string, senderId: any, msg: any) {
     if (!adminNumber.includes(senderId)) return;
 
     const parts = body.split(' ');
@@ -131,7 +131,7 @@ export async function editTagihan(sock: any, chatId: string, body: string, sende
 }
 
 
-export async function createTagihan(sock: any, chatId: string, senderId: string) {
+export async function createTagihan(sock: any, chatId: string, senderId: any) {
     if (!adminNumber.includes(senderId)) return;
 
     try {
@@ -164,13 +164,13 @@ export async function help(sock: any, chatId: string) {
 *.don <id>*
 
 [Edit tagihan]
-*.edit <id> <nama> <jumlah>*: Edit tagihan
+*.edit <id> <nama> <jumlah>*
 
 [Buat tagihan untuk semua penghuni]
-*.buat-tagihan*: Buat tagihan untuk semua penghuni
+*.buat-tagihan*
 
 [Menampilkan daftar perintah]
-*.help*: Tampilkan daftar perintah`;
+*.help*: Tampilkan daftar perinth`;
     
     await sock.sendMessage(chatId, { text: helpText });
 }
