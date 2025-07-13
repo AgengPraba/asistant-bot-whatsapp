@@ -1,6 +1,6 @@
 # Bot Asisten WhatsApp Pribadi & Komunitas
 
-![WhatsApp Bot Banner](https://user-images.githubusercontent.com/user-id/repo-id/path/to/your/banner.png) Bot WhatsApp multifungsi yang dibangun dengan **Node.js**, **TypeScript**, dan **Baileys**. Dirancang sebagai asisten pribadi untuk mahasiswa dan juga dilengkapi dengan fitur manajemen komunitas untuk grup spesifik.
+![WhatsApp Bot Banner](https://user-images.githubusercontent.com/user-id/repo-id/path/to/your/banner.png) Bot WhatsApp multifungsi yang dibangun dengan **Node.js**, **TypeScript**, **Prisma**, dan **Baileys**. Dirancang sebagai asisten pribadi untuk mahasiswa dan juga dilengkapi dengan fitur manajemen komunitas untuk grup spesifik.
 
 ---
 
@@ -60,12 +60,6 @@ Isi file `.env`:
 ```env
 # URL untuk koneksi database Prisma (default menggunakan SQLite)
 DATABASE_URL="file:./dev.db"
-
-# Nomor admin (format JID: 62...s.whatsapp.net), bisa lebih dari satu dipisah koma
-ADMIN_NUMBER="6281234567890@s.whatsapp.net,6289876543210@s.whatsapp.net"
-
-# ID Grup WhatsApp untuk fitur tagihan (gunakan .info di grup tujuan untuk cek id)
-GRUP_ID_LISTRIK="12036304...g.us" 
 ```
 
 **4. Konfigurasi Aplikasi (`config/index.ts`)**
@@ -76,10 +70,13 @@ cp src/config/index.ts.example src/config/index.ts
 Buka file `src/config/index.ts` dan sesuaikan isinya:
 ```typescript
 // ID Grup WhatsApp untuk fitur tagihan
-export const GRUP_ID_LISTRIK = "12036304...g.us";
+export const GRUP_ID_LISTRIK = "6285212345678-1590634905@g.us"
+
+// Nomor admin (format JID: 62...s.whatsapp.net), bisa lebih dari satu dipisah koma
+ADMIN_NUMBER="6281234567890@s.whatsapp.net,6289876543210@s.whatsapp.net"
 
 // Daftar kata-kata yang akan dihapus otomatis oleh bot
-export const FORBIDDEN_WORDS = ['kasar', 'jorok', 'toxic'];
+export const FORBIDDEN_WORDS = ['anjing', 'ajg', 'asw'];
 ```
 
 **5. Jalankan Migrasi Database**
