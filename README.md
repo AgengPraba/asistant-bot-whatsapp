@@ -42,8 +42,8 @@ Ikuti langkah-langkah berikut untuk menjalankan bot di lingkungan lokal Anda.
 
 **1. Clone Repositori**
 ```bash
-git clone https://github.com/AgengPraba/asistant-bot-whatsapp
-cd asistant-bot-whatsapp
+git clone https://github.com/AgengPraba/assistant-bot-whatsapp
+cd assistant-bot-whatsapp
 ```
 
 **2. Instal Dependensi Proyek**
