@@ -1,7 +1,9 @@
 # Bot Asisten WhatsApp Pribadi & Komunitas
 
-![WhatsApp Bot Banner](https://user-images.githubusercontent.com/user-id/repo-id/path/to/your/banner.png) Bot WhatsApp multifungsi yang dibangun dengan **Node.js**, **TypeScript**, **Prisma**, dan **Baileys**. Dirancang sebagai asisten pribadi untuk mahasiswa dan juga dilengkapi dengan fitur manajemen komunitas untuk grup spesifik.
+Bot WhatsApp multifungsi yang dibangun dengan **Node.js**, **TypeScript**, **Prisma**, dan **Baileys**. Dirancang sebagai asisten pribadi untuk mahasiswa dan juga dilengkapi dengan fitur manajemen komunitas untuk grup spesifik.
 
+## 🪟 Preview
+![Preview](./assets/pov-bot.gif) 
 ---
 
 ## ✨ Fitur Utama
