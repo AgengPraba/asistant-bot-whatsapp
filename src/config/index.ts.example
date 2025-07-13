@@ -1,4 +1,5 @@
 // Ganti dengan ID grup WhatsApp yang sesuai ketik ".info" di chat dan cek console.log di terminal
-
 export const GRUP_ID_LISTRIK = "6285212345678-1590634905@g.us" 
 export const ADMIN_NUMBER = "6285212345678@s.whatsapp.net"; 
+
+export const FORBIDDEN_WORDS = ['anjing', 'ajg', 'asw']; // Kata-kata yang dilarang
