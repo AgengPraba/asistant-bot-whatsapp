@@ -57,7 +57,12 @@ cd assistant-bot-whatsapp
 npm install
 ```
 
-**3. Konfigurasi Environment**
+**3. Buat Folder Uploads dan Downloads**
+```bash
+mkdir uploads downloads
+```
+
+**4. Konfigurasi Environment**
 Salin file `.env.example` menjadi `.env` dan isi semua variabel yang dibutuhkan.
 ```bash
 cp .env.example .env
@@ -68,7 +73,7 @@ Isi file `.env`:
 DATABASE_URL="file:./dev.db"
 ```
 
-**4. Konfigurasi Aplikasi (`config/index.ts`)**
+**5. Konfigurasi Aplikasi (`config/index.ts`)**
 Salin file contoh dan isi konfigurasinya. File ini berisi konfigurasi yang tidak rahasia.
 ```bash
 cp src/config/index.ts.example src/config/index.ts
@@ -85,13 +90,13 @@ ADMIN_NUMBER="6281234567890@s.whatsapp.net,6289876543210@s.whatsapp.net"
 export const FORBIDDEN_WORDS = ['anjing', 'ajg', 'asw'];
 ```
 
-**5. Jalankan Migrasi Database**
+**6. Jalankan Migrasi Database**
 Perintah ini akan membuat database SQLite dan tabel yang diperlukan berdasarkan skema Prisma.
 ```bash
 npx prisma migrate dev
 ```
 
-**6. Jalankan Gotenberg via Docker**
+**7. Jalankan Gotenberg via Docker**
 Buka terminal baru (biarkan tetap berjalan) dan jalankan perintah ini untuk mengaktifkan layanan konverter dokumen.
 ```bash
 docker run --rm -p 3000:3000 gotenberg/gotenberg:8
