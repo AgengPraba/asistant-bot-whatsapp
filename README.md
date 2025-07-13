@@ -3,7 +3,11 @@
 Bot WhatsApp multifungsi yang dibangun dengan **Node.js**, **TypeScript**, **Prisma**, dan **Baileys**. Dirancang sebagai asisten pribadi untuk mahasiswa dan juga dilengkapi dengan fitur manajemen komunitas untuk grup spesifik.
 
 ## 🪟 Preview
-![Preview](./assets/pov-bot.gif) 
+<div align="center">
+   <img alt="preview-pov-bot" src="./assets/pov-bot.gif" width="300" />&nbsp;&nbsp;&nbsp;&nbsp;
+   <img alt="preview-pov-bot" src="./assets/pov-client.gif" width="300" />
+</div>
+
 ---
 
 ## ✨ Fitur Utama
